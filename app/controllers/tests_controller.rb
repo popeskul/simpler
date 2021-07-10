@@ -10,8 +10,9 @@ class TestsController < Simpler::Controller
     @time = Time.now
   end
 
-  def create
-
+  def show
+    id = params[:id].to_i
+    @test = Test.all.find { |t| t[:id] == id }
   end
 
 end
