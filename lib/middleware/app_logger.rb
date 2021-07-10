@@ -4,7 +4,6 @@ class AppLogger
 
   def initialize(app)
     @app = app
-    puts Logger
     @logger = Logger.new(Simpler.root.join('log/app.log'))
   end
 
@@ -24,5 +23,4 @@ class AppLogger
         Response: "#{status} [#{headers['Content-Type']}] #{env['simpler.template_path_view']}"
     }
   end
-
 end
